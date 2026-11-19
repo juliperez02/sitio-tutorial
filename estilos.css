@@ -1,0 +1,348 @@
+:root {
+    --dark-bg: #111111;
+    --dark-card: #1a1a1a;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --accent-cyan: #22d3ee;
+    --border-color: #333333;
+    --serif-font: 'Georgia', Times, serif;
+    --sans-serif-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: var(--sans-serif-font);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.serif-heading {
+    font-family: var(--serif-font);
+    font-weight: 400;
+    color: var(--text-main);
+    letter-spacing: 0.02em;
+}
+
+.accent-serif {
+    font-family: var(--serif-font);
+    font-weight: 400;
+    color: var(--accent-cyan);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.serif-title {
+    font-family: var(--serif-font);
+    display: block;
+    font-size: 1.4rem;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.navbar {
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid var(--border-color);
+    color: white;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-brand {
+    line-height: 1.1;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1600px;
+    margin: 3rem auto;
+    padding: 0 3rem;
+    gap: 4rem;
+}
+
+.sidebar {
+    width: 300px;
+    position: sticky;
+    top: 10rem;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-cyan);
+    margin-bottom: 2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 1rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--text-muted);
+    display: block;
+    padding: 0.5rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 1rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    color: white;
+    border-left: 2px solid var(--accent-cyan);
+    background: rgba(34, 211, 238, 0.05);
+}
+
+.content-area {
+    flex: 1;
+    max-width: 1100px;
+    background-color: var(--dark-card);
+    padding: 4rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.hero-section {
+    margin-bottom: 4rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+.fancy-hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 3rem 0;
+    width: 100px;
+}
+
+.content-module {
+    margin-bottom: 4rem;
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.elegant-badge {
+    background-color: rgba(34, 211, 238, 0.1);
+    color: var(--accent-cyan);
+    font-family: var(--serif-font);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-style: italic;
+}
+
+.ref-badge {
+    background-color: rgba(167, 139, 250, 0.1);
+    color: #a78bfa;
+}
+
+.module-header h2 {
+    font-size: 2.2rem;
+}
+
+.module-body p {
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.elegant-list {
+    list-style: none;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.elegant-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.elegant-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+}
+
+.styled-table-dark {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+}
+
+.styled-table-dark th {
+    text-align: left;
+    color: var(--accent-cyan);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-family: var(--serif-font);
+    font-weight: 400;
+}
+
+.styled-table-dark td {
+    padding: 1.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.styled-table-dark td:first-child {
+    border-left: 1px solid var(--border-color);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.styled-table-dark td:last-child {
+    border-right: 1px solid var(--border-color);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.elegant-image-frame {
+    margin: 3rem auto;
+    text-align: center;
+    max-width: 900px;
+}
+
+.elegant-image-frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+    border: 1px solid var(--border-color);
+}
+
+.image-caption {
+    font-family: var(--serif-font);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.section-divider {
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    margin: 4rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--dark-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        padding: 0 1.5rem;
+        margin: 1.5rem auto;
+        gap: 2rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        display: none;
+        background-color: var(--dark-card);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+        margin-bottom: 1rem;
+    }
+
+    .sidebar.show {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .content-area {
+        padding: 2rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .module-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .content-area {
+        padding: 1.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .lead-text {
+        font-size: 1rem;
+    }
+}
